@@ -1,0 +1,481 @@
+Loading stimuli, please wait.......
+
+PTB-INFO: This is Psychtoolbox-3 for Microsoft Windows, under Matlab 64-Bit (Version 3.0.12 - Build date: Apr  1 2016).
+PTB-INFO: Support status on this operating system release: Windows version 10.0 partially supported.
+PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
+PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+
+PTB-WARNING: Call to PsychAvSetMmMaxThreadCharacteristics() for Vista-MMCSS scheduling failed for threadhandle 00007FFB6C49F468. Setting thread priority to HIGHEST as a work-around...
+PTB-INFO: The detected endline of the vertical blank interval is equal or lower than the startline. This indicates
+PTB-INFO: that i couldn't detect the duration of the vertical blank interval and won't be able to correct timestamps
+PTB-INFO: for it. This will introduce a very small and constant offset (typically << 1 msec). Read 'help BeampositionQueries'
+PTB-INFO: for how to correct this, should you really require that last few microseconds of precision.
+PTB-INFO: Btw. this can also mean that your systems beamposition queries are slightly broken. It may help timing precision to
+PTB-INFO: enable the beamposition workaround, as explained in 'help ConserveVRAMSettings', section 'kPsychUseBeampositionQueryWorkaround'.
+PTB-WARNING: Call to PsychAvSetMmMaxThreadCharacteristics() for Vista-MMCSS scheduling failed for threadhandle 00007FFB6C49F468. Setting thread priority to HIGHEST as a work-around...
+
+
+PTB-INFO: OpenGL-Renderer is Intel :: Intel(R) HD Graphics 4000 :: 4.0.0 - Build 10.18.10.4358
+PTB-INFO: VBL startline = 768 , VBL Endline = 768
+PTB-INFO: Measured monitor refresh interval from beamposition = 16.681798 ms [59.945578 Hz].
+PTB-INFO: Will use beamposition query for accurate Flip time stamping.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 16.680896 ms [59.948816 Hz]. (50 valid samples taken, stddev=0.064290 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 16.666667 ms [60.000000 Hz].
+PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+PTB-INFO: Stereo for free fusion or dual-display desktop spanning enabled (2-in-1 stereo).
+PTB-INFO: ==============================================================================================================================
+PTB-INFO: WINDOWS DWM DESKTOP COMPOSITOR IS ACTIVE. On this Windows-10 or later system, Psychtoolbox can no longer reliably detect if
+PTB-INFO: this will cause trouble for timing and integrity of visual stimuli or not. You might be just fine, or you could be in trouble.
+PTB-INFO: Use external measurement equipment and independent procedures to verify reliability of timing if you care about proper timing.
+PTB-INFO: ==============================================================================================================================
+PTB-INFO: Psychtoolbox imaging pipeline starting up for window with requested imagingmode 1025 ...
+PTB-INFO: Will use 8 bits per color component framebuffer for stimulus drawing.
+PTB-INFO: Will use 8 bits per color component framebuffer for stimulus post-processing (if any).
+PTB-DEBUG: DrawText: Failed to load external drawtext plugin [Unknown error].
+PTB-INFO: DrawText: Failed to load external drawtext plugin 'libptbdrawtext_ftgl64.dll'. Reverting to legacy GDI text renderer. 'help DrawTextPlugin' for troubleshooting.
+PTB-WARNING: Call to PsychAvSetMmMaxThreadCharacteristics() for Vista-MMCSS scheduling failed for threadhandle 00007FFB6C49F468. Setting thread priority to HIGHEST as a work-around...
+Error in function Flip: 	Invalid Window (or Texture) Index provided: It doesn't correspond to an open window or texture.
+Did you close it accidentally via Screen('Close') or Screen('CloseAll') ?
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Screen')" style="font-weight:bold">Screen</a>
+Usage:
+
+[VBLTimestamp StimulusOnsetTime FlipTimestamp Missed
+Beampos] = Screen('Flip', windowPtr [, when] [, dontclear]
+[, dontsync] [, multiflip]);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('doTrialHardConsc', 'C:\Users\Yaniv\Google Drive\Lab\bCFS2.0\Code\doTrialHardConsc.m', 119)" style="font-weight:bold">doTrialHardConsc</a> (<a href="matlab: opentoline('C:\Users\Yaniv\Google Drive\Lab\bCFS2.0\Code\doTrialHardConsc.m',119,0)">line 119</a>)
+Screen('Flip', Params.w);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('runBlock', 'C:\Users\Yaniv\Google Drive\Lab\bCFS2.0\Code\runBlock.m', 47)" style="font-weight:bold">runBlock</a> (<a href="matlab: opentoline('C:\Users\Yaniv\Google Drive\Lab\bCFS2.0\Code\runBlock.m',47,0)">line 47</a>)
+                data = doTrialHardConsc(Params,Trial);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('B1', 'C:\Users\Yaniv\Google Drive\Lab\bCFS2.0\Code\B1.m', 80)" style="font-weight:bold">B1</a> (<a href="matlab: opentoline('C:\Users\Yaniv\Google Drive\Lab\bCFS2.0\Code\B1.m',80,0)">line 80</a>)
+    Logger = runBlock(Params,exp);
+} 
+mcc -mv -o filename function.m
+Compiler version: 6.1 (R2015b)
+Dependency analysis by REQUIREMENTS.
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('mcc')" style="font-weight:bold">mcc</a>
+Unexpected error while determining required deployable
+files. Compilation terminated.
+} 
+mcc -mv -o filename function.m
+Compiler version: 6.1 (R2015b)
+Dependency analysis by REQUIREMENTS.
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('mcc')" style="font-weight:bold">mcc</a>
+Unexpected error while determining required deployable
+files. Compilation terminated.
+} 
+mcc -mv -o V1 B1.m
+Compiler version: 6.1 (R2015b)
+Dependency analysis by REQUIREMENTS.
+PsychStartup: Environment variable GSTREAMER_1_0_ROOT_X86_64 is undefined. 
+PsychStartup: Either GStreamer-1.4 is not installed at all, or if it is installed then something 
+PsychStartup: is botched. Trying various common locations for the GStreamer runtime to keep going. 
+ 
+PsychStartup: Path to GStreamer runtime is undefined! This probably means that 
+PsychStartup: the 64-Bit GStreamer 1.x runtime from www.gstreamer.net is not installed. 
+PsychStartup: The Psychtoolbox Screen() multimedia functions and the new 'DrawText' 
+PsychStartup: high quality text renderer will fail to work until you fix 
+PsychStartup: this! Read 'help GStreamer' for instructions. 
+ 
+Parsing file "C:\Users\Yaniv\Google Drive\Lab\bCFS2.0\Code\B1.m" 
+	(Referenced from: "Compiler Command Line"). 
+Deleting 7 temporary MEX authorization files. 
+Removing: 'C:\Users\Yaniv\AppData\Local\Temp\mathworks_tmp_003d82967_984.auth'. 
+Removing: 'C:\Users\Yaniv\AppData\Local\Temp\mathworks_tmp_003d812056_984.auth'. 
+Removing: 'C:\Users\Yaniv\AppData\Local\Temp\mathworks_tmp_003d8345_984.auth'. 
+Removing: 'C:\Users\Yaniv\AppData\Local\Temp\mathworks_tmp_003d827059_984.auth'. 
+Removing: 'C:\Users\Yaniv\AppData\Local\Temp\mathworks_tmp_003d84866_984.auth'. 
+Removing: 'C:\Users\Yaniv\AppData\Local\Temp\mathworks_tmp_003d812531_984.auth'. 
+Removing: 'C:\Users\Yaniv\AppData\Local\Temp\mathworks_tmp_003d81719_984.auth'. 
+Generating file "C:\Users\Yaniv\Google Drive\Lab\bCFS2.0\Code\readme.txt". 
+mcc -mv -o V1 B1.m
+Compiler version: 6.1 (R2015b)
+Dependency analysis by REQUIREMENTS.
+PsychStartup: Environment variable GSTREAMER_1_0_ROOT_X86_64 is undefined. 
+PsychStartup: Either GStreamer-1.4 is not installed at all, or if it is installed then something 
+PsychStartup: is botched. Trying various common locations for the GStreamer runtime to keep going. 
+ 
+PsychStartup: Path to GStreamer runtime is undefined! This probably means that 
+PsychStartup: the 64-Bit GStreamer 1.x runtime from www.gstreamer.net is not installed. 
+PsychStartup: The Psychtoolbox Screen() multimedia functions and the new 'DrawText' 
+PsychStartup: high quality text renderer will fail to work until you fix 
+PsychStartup: this! Read 'help GStreamer' for instructions. 
+ 
+Parsing file "C:\Users\Yaniv\Google Drive\Lab\bCFS2.0\Code\B1.m" 
+	(Referenced from: "Compiler Command Line"). 
+Deleting 7 temporary MEX authorization files. 
+Removing: 'C:\Users\Yaniv\AppData\Local\Temp\mathworks_tmp_00f082919_3848.auth'. 
+Removing: 'C:\Users\Yaniv\AppData\Local\Temp\mathworks_tmp_00f086538_3848.auth'. 
+Removing: 'C:\Users\Yaniv\AppData\Local\Temp\mathworks_tmp_00f081865_3848.auth'. 
+Removing: 'C:\Users\Yaniv\AppData\Local\Temp\mathworks_tmp_00f0816200_3848.auth'. 
+Removing: 'C:\Users\Yaniv\AppData\Local\Temp\mathworks_tmp_00f0830342_3848.auth'. 
+Removing: 'C:\Users\Yaniv\AppData\Local\Temp\mathworks_tmp_00f0819018_3848.auth'. 
+Removing: 'C:\Users\Yaniv\AppData\Local\Temp\mathworks_tmp_00f0823801_3848.auth'. 
+Generating file "C:\Users\Yaniv\Google Drive\Lab\bCFS2.0\Code\readme.txt". 
+edit moglcore.mexw64
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('edit', 'C:\Program Files\MATLAB\R2015b\toolbox\matlab\codetools\edit.m', 64)" style="font-weight:bold">edit</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2015b\toolbox\matlab\codetools\edit.m',64,0)">line 64</a>)
+Cannot edit the MEX-file 'C:\Users\Yaniv\Google
+Drive\Lab\bCFS2.0\Code\moglcore.mexw64'.
+} 
+moglcore.mexw64
+{Undefined variable "moglcore" or class "moglcore.mexw64".
+} 
+moglcore
+MOGL-Command: DEBUGLEVEL
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('moglcore')" style="font-weight:bold">moglcore</a>
+invalid moglcore command
+} 
+moglwrapper
+{Undefined function or variable 'moglwrapper'.
+} 
+moglwrap
+{Undefined function or variable 'moglwrap'.
+} 
+B1
+subject number?
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('B1', 'C:\Users\Yaniv\Google Drive\Lab\bCFS2.0\Code\B1.m', 25)" style="font-weight:bold">B1</a> (<a href="matlab: opentoline('C:\Users\Yaniv\Google Drive\Lab\bCFS2.0\Code\B1.m',25,0)">line 25</a>)
+
+} 
+mcc -mv -o V1 B1.m
+Compiler version: 6.1 (R2015b)
+Dependency analysis by REQUIREMENTS.
+PsychStartup: Environment variable GSTREAMER_1_0_ROOT_X86_64 is undefined. 
+PsychStartup: Either GStreamer-1.4 is not installed at all, or if it is installed then something 
+PsychStartup: is botched. Trying various common locations for the GStreamer runtime to keep going. 
+ 
+PsychStartup: Path to GStreamer runtime is undefined! This probably means that 
+PsychStartup: the 64-Bit GStreamer 1.x runtime from www.gstreamer.net is not installed. 
+PsychStartup: The Psychtoolbox Screen() multimedia functions and the new 'DrawText' 
+PsychStartup: high quality text renderer will fail to work until you fix 
+PsychStartup: this! Read 'help GStreamer' for instructions. 
+ 
+Parsing file "C:\Users\Yaniv\Google Drive\Lab\bCFS2.0\Code\B1.m" 
+	(Referenced from: "Compiler Command Line"). 
+Deleting 7 temporary MEX authorization files. 
+Removing: 'C:\Users\Yaniv\AppData\Local\Temp\mathworks_tmp_020b817253_8376.auth'. 
+Removing: 'C:\Users\Yaniv\AppData\Local\Temp\mathworks_tmp_020b816861_8376.auth'. 
+Removing: 'C:\Users\Yaniv\AppData\Local\Temp\mathworks_tmp_020b813105_8376.auth'. 
+Removing: 'C:\Users\Yaniv\AppData\Local\Temp\mathworks_tmp_020b82990_8376.auth'. 
+Removing: 'C:\Users\Yaniv\AppData\Local\Temp\mathworks_tmp_020b825786_8376.auth'. 
+Removing: 'C:\Users\Yaniv\AppData\Local\Temp\mathworks_tmp_020b814905_8376.auth'. 
+Removing: 'C:\Users\Yaniv\AppData\Local\Temp\mathworks_tmp_020b816196_8376.auth'. 
+Generating file "C:\Users\Yaniv\Google Drive\Lab\bCFS2.0\Code\readme.txt". 
+edit InitializeMatlabOpenGL
+edit glmGetConst
+mcc -mv -o V1 B1.m -a C:\Program Files\Toolbox\Psychtoolbox\PsychOpenGL\MOGL\
+Compiler version: 6.1 (R2015b)
+Dependency analysis by REQUIREMENTS.
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('mcc')" style="font-weight:bold">mcc</a>
+Invalid directory: C:\Users\Yaniv\Google
+Drive\Lab\bCFS2.0\Code\Files\Toolbox\Psychtoolbox\PsychOpenGL\MOGL
+
+} 
+mcc -mv -o V1 B1.m -a 'C:\Program Files\Toolbox\Psychtoolbox\PsychOpenGL\MOGL\'
+Compiler version: 6.1 (R2015b)
+Dependency analysis by REQUIREMENTS.
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.depfun.internal.cacheMtree', 'C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\cacheMtree.m', 29)" style="font-weight:bold">matlab.depfun.internal.cacheMtree</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\cacheMtree.m',29,0)">line 29</a>)
+MATLAB code 'C:\Program
+Files\Toolbox\Psychtoolbox\PsychOpenGL\MOGL\wrap\glGetProgramResourceiv.m'
+contains the following syntax error(s):
+L 19 (C 33): NOPAR: Invalid syntax at ';'. Possibly, a ),
+}, or ] is missing.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('isClassdef>hasClassDef', 'C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\private\isClassdef.m', 27)" style="font-weight:bold">isClassdef>hasClassDef</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\private\isClassdef.m',27,0)">line 27</a>)
+        mt = matlab.depfun.internal.cacheMtree(file);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('isClassdef', 'C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\private\isClassdef.m', 13)" style="font-weight:bold">isClassdef</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\private\isClassdef.m',13,0)">line 13</a>)
+        tf = hasClassDef(file);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('className_impl', 'C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\private\className_impl.m', 118)" style="font-weight:bold">className_impl</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\private\className_impl.m',118,0)">line 118</a>)
+    elseif isClassdef(whichResult)
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('className', 'C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\private\className.m', 13)" style="font-weight:bold">className</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\private\className.m',13,0)">line 13</a>)
+        [name, clsFile] = className_impl(whichResult);
+
+Error in
+<a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.depfun.internal.MatlabSymbol/determineClassType', 'C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\MatlabSymbol.m', 742)" style="font-weight:bold">matlab.depfun.internal.MatlabSymbol/determineClassType</a>
+(<a href="matlab: opentoline('C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\MatlabSymbol.m',742,0)">line 742</a>)
+            [name, clsFile] =
+            className(symObj.WhichResult);
+
+Error in
+<a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.depfun.internal.MatlabSymbol/getTypeUsingEnvironment', 'C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\MatlabSymbol.m', 706)" style="font-weight:bold">matlab.depfun.internal.MatlabSymbol/getTypeUsingEnvironment</a>
+(<a href="matlab: opentoline('C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\MatlabSymbol.m',706,0)">line 706</a>)
+            determineClassType(symObj);
+
+Error in
+<a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.depfun.internal.MatlabSymbol/determineMatlabType', 'C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\MatlabSymbol.m', 644)" style="font-weight:bold">matlab.depfun.internal.MatlabSymbol/determineMatlabType</a>
+(<a href="matlab: opentoline('C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\MatlabSymbol.m',644,0)">line 644</a>)
+                getTypeUsingEnvironment(symObj);
+
+Error in
+<a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.depfun.internal.MatlabInspector>determineSymbolType', 'C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\MatlabInspector.m', 696)" style="font-weight:bold">matlab.depfun.internal.MatlabInspector>determineSymbolType</a>
+(<a href="matlab: opentoline('C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\MatlabInspector.m',696,0)">line 696</a>)
+        determineMatlabType(symbol);
+
+Error in
+<a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.depfun.internal.MatlabInspector.resolveType', 'C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\MatlabInspector.m', 111)" style="font-weight:bold">matlab.depfun.internal.MatlabInspector.resolveType</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\MatlabInspector.m',111,0)">line
+111</a>)
+                determineSymbolType(symbol, fsCache,
+                addExc);
+
+Error in
+<a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.depfun.internal.MatlabInspector/determineType', 'C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\MatlabInspector.m', 155)" style="font-weight:bold">matlab.depfun.internal.MatlabInspector/determineType</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\MatlabInspector.m',155,0)">line
+155</a>)
+                    matlab.depfun.internal.MatlabInspector.resolveType(
+                    ...
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.depfun.internal.Completion/resolveRootSet', 'C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\Completion.m', 1095)" style="font-weight:bold">matlab.depfun.internal.Completion/resolveRootSet</a>
+(<a href="matlab: opentoline('C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\Completion.m',1095,0)">line 1095</a>)
+                        determineType(inspector, name);
+
+Error in
+<a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.depfun.internal.Completion/initializeRootSet', 'C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\Completion.m', 1347)" style="font-weight:bold">matlab.depfun.internal.Completion/initializeRootSet</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\Completion.m',1347,0)">line
+1347</a>)
+            [rootSymbols, unknownType] =
+            resolveRootSet(obj, files);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.depfun.internal.Completion', 'C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\Completion.m', 2171)" style="font-weight:bold">matlab.depfun.internal.Completion</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\Completion.m',2171,0)">line 2171</a>)
+                obj.RootSet = initializeRootSet(obj,
+                files);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.depfun.internal.requirements', 'C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\requirements.m', 196)" style="font-weight:bold">matlab.depfun.internal.requirements</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\requirements.m',196,0)">line 196</a>)
+    c = matlab.depfun.internal.Completion(items, tgt,
+    'useDatabase');
+} 
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('mcc')" style="font-weight:bold">mcc</a>
+Unexpected error while determining required deployable
+files. Compilation terminated.
+} 
+edit glGetProgramResourceiv
+mcc -mv -o V1 B1.m -a 'C:\Program Files\Toolbox\Psychtoolbox\PsychOpenGL\MOGL\'
+Compiler version: 6.1 (R2015b)
+Dependency analysis by REQUIREMENTS.
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.depfun.internal.cacheMtree', 'C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\cacheMtree.m', 29)" style="font-weight:bold">matlab.depfun.internal.cacheMtree</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\cacheMtree.m',29,0)">line 29</a>)
+MATLAB code 'C:\Program
+Files\Toolbox\Psychtoolbox\PsychOpenGL\MOGL\wrap\glmGetPixels.m'
+contains the following syntax error(s):
+L 21 (C 20): SYNER: Parse error at ')': usage might be
+invalid MATLAB syntax.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('isClassdef>hasClassDef', 'C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\private\isClassdef.m', 27)" style="font-weight:bold">isClassdef>hasClassDef</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\private\isClassdef.m',27,0)">line 27</a>)
+        mt = matlab.depfun.internal.cacheMtree(file);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('isClassdef', 'C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\private\isClassdef.m', 13)" style="font-weight:bold">isClassdef</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\private\isClassdef.m',13,0)">line 13</a>)
+        tf = hasClassDef(file);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('className_impl', 'C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\private\className_impl.m', 118)" style="font-weight:bold">className_impl</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\private\className_impl.m',118,0)">line 118</a>)
+    elseif isClassdef(whichResult)
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('className', 'C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\private\className.m', 13)" style="font-weight:bold">className</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\private\className.m',13,0)">line 13</a>)
+        [name, clsFile] = className_impl(whichResult);
+
+Error in
+<a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.depfun.internal.MatlabSymbol/determineClassType', 'C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\MatlabSymbol.m', 742)" style="font-weight:bold">matlab.depfun.internal.MatlabSymbol/determineClassType</a>
+(<a href="matlab: opentoline('C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\MatlabSymbol.m',742,0)">line 742</a>)
+            [name, clsFile] =
+            className(symObj.WhichResult);
+
+Error in
+<a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.depfun.internal.MatlabSymbol/getTypeUsingEnvironment', 'C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\MatlabSymbol.m', 706)" style="font-weight:bold">matlab.depfun.internal.MatlabSymbol/getTypeUsingEnvironment</a>
+(<a href="matlab: opentoline('C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\MatlabSymbol.m',706,0)">line 706</a>)
+            determineClassType(symObj);
+
+Error in
+<a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.depfun.internal.MatlabSymbol/determineMatlabType', 'C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\MatlabSymbol.m', 644)" style="font-weight:bold">matlab.depfun.internal.MatlabSymbol/determineMatlabType</a>
+(<a href="matlab: opentoline('C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\MatlabSymbol.m',644,0)">line 644</a>)
+                getTypeUsingEnvironment(symObj);
+
+Error in
+<a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.depfun.internal.MatlabInspector>determineSymbolType', 'C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\MatlabInspector.m', 696)" style="font-weight:bold">matlab.depfun.internal.MatlabInspector>determineSymbolType</a>
+(<a href="matlab: opentoline('C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\MatlabInspector.m',696,0)">line 696</a>)
+        determineMatlabType(symbol);
+
+Error in
+<a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.depfun.internal.MatlabInspector.resolveType', 'C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\MatlabInspector.m', 111)" style="font-weight:bold">matlab.depfun.internal.MatlabInspector.resolveType</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\MatlabInspector.m',111,0)">line
+111</a>)
+                determineSymbolType(symbol, fsCache,
+                addExc);
+
+Error in
+<a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.depfun.internal.MatlabInspector/determineType', 'C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\MatlabInspector.m', 155)" style="font-weight:bold">matlab.depfun.internal.MatlabInspector/determineType</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\MatlabInspector.m',155,0)">line
+155</a>)
+                    matlab.depfun.internal.MatlabInspector.resolveType(
+                    ...
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.depfun.internal.Completion/resolveRootSet', 'C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\Completion.m', 1095)" style="font-weight:bold">matlab.depfun.internal.Completion/resolveRootSet</a>
+(<a href="matlab: opentoline('C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\Completion.m',1095,0)">line 1095</a>)
+                        determineType(inspector, name);
+
+Error in
+<a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.depfun.internal.Completion/initializeRootSet', 'C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\Completion.m', 1347)" style="font-weight:bold">matlab.depfun.internal.Completion/initializeRootSet</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\Completion.m',1347,0)">line
+1347</a>)
+            [rootSymbols, unknownType] =
+            resolveRootSet(obj, files);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.depfun.internal.Completion', 'C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\Completion.m', 2171)" style="font-weight:bold">matlab.depfun.internal.Completion</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\Completion.m',2171,0)">line 2171</a>)
+                obj.RootSet = initializeRootSet(obj,
+                files);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('matlab.depfun.internal.requirements', 'C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\requirements.m', 196)" style="font-weight:bold">matlab.depfun.internal.requirements</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2015b\toolbox\matlab\depfun\+matlab\+depfun\+internal\requirements.m',196,0)">line 196</a>)
+    c = matlab.depfun.internal.Completion(items, tgt,
+    'useDatabase');
+} 
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('mcc')" style="font-weight:bold">mcc</a>
+Unexpected error while determining required deployable
+files. Compilation terminated.
+} 
+mcc -mv -o V1 B1.m -a 'C:\Program Files\Toolbox\Psychtoolbox\PsychOpenGL\MOGL\'
+Compiler version: 6.1 (R2015b)
+Dependency analysis by REQUIREMENTS.
+PsychStartup: Environment variable GSTREAMER_1_0_ROOT_X86_64 is undefined. 
+PsychStartup: Either GStreamer-1.4 is not installed at all, or if it is installed then something 
+PsychStartup: is botched. Trying various common locations for the GStreamer runtime to keep going. 
+ 
+PsychStartup: Path to GStreamer runtime is undefined! This probably means that 
+PsychStartup: the 64-Bit GStreamer 1.x runtime from www.gstreamer.net is not installed. 
+PsychStartup: The Psychtoolbox Screen() multimedia functions and the new 'DrawText' 
+PsychStartup: high quality text renderer will fail to work until you fix 
+PsychStartup: this! Read 'help GStreamer' for instructions. 
+ 
+Parsing file "C:\Users\Yaniv\Google Drive\Lab\bCFS2.0\Code\B1.m" 
+	(Referenced from: "Compiler Command Line"). 
+The file  
+ 'C:\Program Files\Toolbox\Psychtoolbox\PsychOpenGL\MOGL\wrap\glClearNamedFramebufferfv.m'  
+ is empty (zero bytes long).  
+ 
+ This file cannot be added to the CTF archive because it will cause an error  
+ when the application or library is run. Add valid content to this file if 
+ your application or library requires this file. 
+Failed to build CTF file: 'V1.ctf'. 
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('mcc')" style="font-weight:bold">mcc</a>
+Error executing mcc, return status = 1 (0x1).
+} 
+mcc -mv -o V1 B1.m -a 'C:\Program Files\Toolbox\Psychtoolbox\PsychOpenGL\MOGL\'
+Compiler version: 6.1 (R2015b)
+Dependency analysis by REQUIREMENTS.
+PsychStartup: Environment variable GSTREAMER_1_0_ROOT_X86_64 is undefined. 
+PsychStartup: Either GStreamer-1.4 is not installed at all, or if it is installed then something 
+PsychStartup: is botched. Trying various common locations for the GStreamer runtime to keep going. 
+ 
+PsychStartup: Path to GStreamer runtime is undefined! This probably means that 
+PsychStartup: the 64-Bit GStreamer 1.x runtime from www.gstreamer.net is not installed. 
+PsychStartup: The Psychtoolbox Screen() multimedia functions and the new 'DrawText' 
+PsychStartup: high quality text renderer will fail to work until you fix 
+PsychStartup: this! Read 'help GStreamer' for instructions. 
+ 
+Parsing file "C:\Users\Yaniv\Google Drive\Lab\bCFS2.0\Code\B1.m" 
+	(Referenced from: "Compiler Command Line"). 
+The file  
+ 'C:\Program Files\Toolbox\Psychtoolbox\PsychOpenGL\MOGL\wrap\glClearNamedFramebufferiv.m'  
+ is empty (zero bytes long).  
+ 
+ This file cannot be added to the CTF archive because it will cause an error  
+ when the application or library is run. Add valid content to this file if 
+ your application or library requires this file. 
+Failed to build CTF file: 'V1.ctf'. 
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('mcc')" style="font-weight:bold">mcc</a>
+Error executing mcc, return status = 1 (0x1).
+} 
+mcc -mv -o V1 B1.m -a 'C:\Program Files\Toolbox\Psychtoolbox\PsychOpenGL\MOGL\'
+Compiler version: 6.1 (R2015b)
+Dependency analysis by REQUIREMENTS.
+PsychStartup: Environment variable GSTREAMER_1_0_ROOT_X86_64 is undefined. 
+PsychStartup: Either GStreamer-1.4 is not installed at all, or if it is installed then something 
+PsychStartup: is botched. Trying various common locations for the GStreamer runtime to keep going. 
+ 
+PsychStartup: Path to GStreamer runtime is undefined! This probably means that 
+PsychStartup: the 64-Bit GStreamer 1.x runtime from www.gstreamer.net is not installed. 
+PsychStartup: The Psychtoolbox Screen() multimedia functions and the new 'DrawText' 
+PsychStartup: high quality text renderer will fail to work until you fix 
+PsychStartup: this! Read 'help GStreamer' for instructions. 
+ 
+Parsing file "C:\Users\Yaniv\Google Drive\Lab\bCFS2.0\Code\B1.m" 
+	(Referenced from: "Compiler Command Line"). 
+The file  
+ 'C:\Program Files\Toolbox\Psychtoolbox\PsychOpenGL\MOGL\wrap\glClearNamedFramebufferuiv.m'  
+ is empty (zero bytes long).  
+ 
+ This file cannot be added to the CTF archive because it will cause an error  
+ when the application or library is run. Add valid content to this file if 
+ your application or library requires this file. 
+Failed to build CTF file: 'V1.ctf'. 
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('mcc')" style="font-weight:bold">mcc</a>
+Error executing mcc, return status = 1 (0x1).
+} 
+mcc -mv -o V1 B1.m -a 'C:\Program Files\Toolbox\Psychtoolbox\PsychOpenGL\MOGL\'
+Compiler version: 6.1 (R2015b)
+Dependency analysis by REQUIREMENTS.
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('mcc')" style="font-weight:bold">mcc</a>
+Unexpected error while determining required deployable
+files. Compilation terminated.
+} 
+edit InitializeMatlabOpenGL 
+mcc -mv -o V1 B1.m
+Compiler version: 6.1 (R2015b)
+Dependency analysis by REQUIREMENTS.
+PsychStartup: Environment variable GSTREAMER_1_0_ROOT_X86_64 is undefined. 
+PsychStartup: Either GStreamer-1.4 is not installed at all, or if it is installed then something 
+PsychStartup: is botched. Trying various common locations for the GStreamer runtime to keep going. 
+ 
+PsychStartup: Path to GStreamer runtime is undefined! This probably means that 
+PsychStartup: the 64-Bit GStreamer 1.x runtime from www.gstreamer.net is not installed. 
+PsychStartup: The Psychtoolbox Screen() multimedia functions and the new 'DrawText' 
+PsychStartup: high quality text renderer will fail to work until you fix 
+PsychStartup: this! Read 'help GStreamer' for instructions. 
+ 
+Parsing file "C:\Users\Yaniv\Google Drive\Lab\bCFS2.0\Code\B1.m" 
+	(Referenced from: "Compiler Command Line"). 
+Deleting 7 temporary MEX authorization files. 
+Removing: 'C:\Users\Yaniv\AppData\Local\Temp\mathworks_tmp_02664841_9828.auth'. 
+Removing: 'C:\Users\Yaniv\AppData\Local\Temp\mathworks_tmp_0266426796_9828.auth'. 
+Removing: 'C:\Users\Yaniv\AppData\Local\Temp\mathworks_tmp_0266420891_9828.auth'. 
+Removing: 'C:\Users\Yaniv\AppData\Local\Temp\mathworks_tmp_0266425847_9828.auth'. 
+Removing: 'C:\Users\Yaniv\AppData\Local\Temp\mathworks_tmp_0266413337_9828.auth'. 
+Removing: 'C:\Users\Yaniv\AppData\Local\Temp\mathworks_tmp_026644101_9828.auth'. 
+Removing: 'C:\Users\Yaniv\AppData\Local\Temp\mathworks_tmp_0266412666_9828.auth'. 
+Generating file "C:\Users\Yaniv\Google Drive\Lab\bCFS2.0\Code\readme.txt". 
+mcc -mv -o V1 B1.m -a 'C:\Program Files\Toolbox\Psychtoolbox\PsychOpenGL\MOGL\'
+Compiler version: 6.1 (R2015b)
+Dependency analysis by REQUIREMENTS.
+PsychStartup: Environment variable GSTREAMER_1_0_ROOT_X86_64 is undefined. 
+PsychStartup: Either GStreamer-1.4 is not installed at all, or if it is installed then something 
+PsychStartup: is botched. Trying various common locations for the GStreamer runtime to keep going. 
+ 
+PsychStartup: Path to GStreamer runtime is undefined! This probably means that 
+PsychStartup: the 64-Bit GStreamer 1.x runtime from www.gstreamer.net is not installed. 
+PsychStartup: The Psychtoolbox Screen() multimedia functions and the new 'DrawText' 
+PsychStartup: high quality text renderer will fail to work until you fix 
+PsychStartup: this! Read 'help GStreamer' for instructions. 
+ 
+Parsing file "C:\Users\Yaniv\Google Drive\Lab\bCFS2.0\Code\B1.m" 
+	(Referenced from: "Compiler Command Line"). 
+The file  
+ 'C:\Program Files\Toolbox\Psychtoolbox\PsychOpenGL\MOGL\wrap\glClearTexSubImage.m'  
+ is empty (zero bytes long).  
+ 
+ This file cannot be added to the CTF archive because it will cause an error  
+ when the application or library is run. Add valid content to this file if 
+ your application or library requires this file. 
+Failed to build CTF file: 'V1.ctf'. 
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('mcc')" style="font-weight:bold">mcc</a>
+Error executing mcc, return status = 1 (0x1).
+} 
+exist('text','var')
+
+ans =
+
+     0
+
+B1
+subject number?
+{Operation terminated by user during <a href="matlab:matlab.internal.language.introspective.errorDocCallback('B1', 'C:\Users\Yaniv\Google Drive\Lab\Todorov\bCFS-Dim7\Code\B1.m', 24)" style="font-weight:bold">B1</a>
+(<a href="matlab: opentoline('C:\Users\Yaniv\Google Drive\Lab\Todorov\bCFS-Dim7\Code\B1.m',24,0)">line 24</a>)
+
+} 
+T7
+subject number?
+99
