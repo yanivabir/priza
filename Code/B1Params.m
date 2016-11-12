@@ -39,32 +39,33 @@ Params.breakEvery = 100;    % Break every x trials
 
 %% General presentation
 Params.bw = [0.5 0.5 0.5];  % Background color in RGB
-Params.fixationSize = 1;    % Fixation size in visual angle
+Params.fixationSize = 1.75;    % Fixation size in visual angle
 
 %% Stimulus presentation parameters
-Params.stimulus.size = 5;   % Stim width/height in visual angle
+Params.stimulus.size = 15.5;   % Stim width/height in visual angle
 Params.stimulus.maxAlpha = 0.35;    % Maximux stimulus opacity value
+Params.stimulus.monocStimAlpha = 1;   % Stimulus opacitiy value for monocular conscoius control trials
 Params.stimulus.fadeInTime = 1;     % Initial time period for stimulus fade in (sec)
 
 %% Presentation frame
 Params.frame.type = 'line';    % Type of convergence frame to draw, only lines implemented
 
-Params.frame.width = 7;         % width of inner frame in visual angle
-Params.frame.height = 15;         % height of inner frame in visual angle
+Params.frame.width = 14.5;         % width of inner frame in visual angle
+Params.frame.height = 34.5;         % height of inner frame in visual angle
 
 % Specific parameters by frame type - these change the appearance of the
 % frame type you chose
 switch Params.frame.type
     case 'line'
         Params.frame.color = [0 0 0]; % Color of frame in rgb
-        Params.frame.penWidth = 1/5;   % Width of stroke in visual angles
+        Params.frame.penWidth = .28;   % Width of stroke in visual angles
         Params.frame.delta = 1;   % Space b/w two line frames in visual angle
 end
 
 %% Mondrian parameters
 Params.mondrian.rectNum = 450;  % Number of rectangles in mondrian
-Params.mondrian.width = 2/3;     % Min rectangle width (max is times 2), visual angles
-Params.mondrian.height = 2/3;    % Min rectangle height (max is times 2), visual angles
+Params.mondrian.width = 1.2;     % Min rectangle width (max is times 2), visual angles
+Params.mondrian.height = 1.2;    % Min rectangle height (max is times 2), visual angles
 Params.mondrian.Hz = 10;    % Mondrian change rate (Hz)
 Params.mondrian.fadeOutTime = 3;    % Fade out time for mondrian from end of trial (sec)
 
