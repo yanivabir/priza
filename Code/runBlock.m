@@ -43,8 +43,12 @@ function Logger = runBlock(Params, Block)
         switch Trial.Type
             case 'bCFS'
                 data = doTrial(Params,Trial);
-            case 'hard conscious control'
+            case {'hard conscious control','static conscious control'}
                 data = doTrialHardConsc(Params,Trial);
+            case 'just stimulus'
+                data = doTrialJustStim(Params,Trial);
+            case 'monocular conscious control'
+                data = doTrialMonocConsc(Params,Trial);
         end
         ITIStart = GetSecs();
         
@@ -92,7 +96,8 @@ function Logger = runBlock(Params, Block)
             % condition
             locations = Shuffle([ones(1,ceil(Block.repetitions * length(stimuli)/2)) ...
                 zeros(1,floor(Block.repetitions * length(stimuli)/2))] + 9);
-            if strcmp(Block.trialType, 'bCFS')
+            if strcmp(Block.trialType{type}, 'bCFS') || ...
+                    strcmp(Block.trialType{type}, 'monocular conscious control')
                 eyes = Shuffle(locations)-9;
             else
                 eyes = NaN(size(locations));
@@ -105,8 +110,8 @@ function Logger = runBlock(Params, Block)
                     Plan(count).Subject = Params.subjectNumber;
                     Plan(count).Stimulus = Images.filename{stim};
                     Plan(count).Type = Block.trialType{type};
-                    Plan(count).Eye = eyes(count);
-                    Plan(count).Location = locations(count);
+                    Plan(count).Eye = eyes(count - startBlock + 1);
+                    Plan(count).Location = locations(count - startBlock + 1);
                     
                     count = count+1;
                 end

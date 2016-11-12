@@ -98,4 +98,43 @@ for side = [0 1]
     end
     KbReleaseWait;
 end
+
+%% Frame validation
+%% Color screen black and wait for key stroke
+Screen('Flip',Params.w);
+for side = [0 1]
+    
+    % Select eye for frame
+        Screen('SelectStereoDrawBuffer', Params.w, side);
+        
+    % Prepare frame
+    frame = zeros(2,4);
+    frame(1,:) = CenterRectCalib(Params,angle2pix(Params.Display,[0 0 Params.frame.width ...
+        Params.frame.height]), side);
+    frame(2,:) = CenterRectCalib(Params, angle2pix(Params.Display,[0 0 Params.frame.width + ...
+        Params.frame.delta Params.frame.height + ...
+        Params.frame.delta]), side);
+    
+    % Draw frame
+    Screen('FrameRect',Params.w, Params.frame.color', frame', ...
+        angle2pix(Params.Display,Params.frame.penWidth));
+end
+Screen('Flip',Params.w);
+
+
+exitFlag = 0;
+while exitFlag == 0
+    WaitSecs(0.1);     % Prevent CPU overload
+    [key_is_down,~,key_code,~] = KbCheck();                 %check for subject keypress
+    if key_is_down
+        if key_code(KbName('1!'))
+            break
+        elseif key_code(Params.keyEsc)
+            sca;
+            break;
+        end
+    end
+end
+KbReleaseWait;
+
 end

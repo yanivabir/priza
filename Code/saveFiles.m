@@ -1,5 +1,5 @@
-function saveFiles(Params,Logger)
-% Saves Params and Logger to file, according to format specified in Params
+function saveFiles(Params,Logger,text)
+% Saves Params and Logger to file, according to format specified in Params.
 % The optional input variable 'text' allows for appending a label to the
 % filename.
 

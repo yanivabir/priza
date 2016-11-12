@@ -13,7 +13,16 @@ switch Params.location
         Display.reduceCrossTalk = [];    % If you want cross-talk reduction b/w sides, specify gain. Otherwise leave empty
         
         % This command depends on OS. For windows max is correct
-        Display.screenNumber=max(Screen('screens'));    
+        Display.screenNumber=max(Screen('screens'));
+        
+    case 'A'
+        Display.dimensions = [31.8 23.8];       % (cm)
+        Display.distance = 30.5;              % Viewing distance (cm)
+        Display.stereoMode = 'stereoscope';
+        Display.reduceCrossTalk = [];    % If you want cross-talk reduction b/w sides, specify gain. Otherwise leave empty
+        
+        % This command depends on OS. For windows max is correct
+        Display.screenNumber=max(Screen('screens'));
 end
 
 %% Parameters that are computed automatically

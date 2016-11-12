@@ -10,7 +10,10 @@ Features:
 - Different frames can be added easily enough.
 - Types of experiments implemented:
   - Classical bCFS
-  - A hard conscoius control
+  - A hard conscoius control (Stimulus appearing at maximal contrast on trials start, blended into dynamic mask)
+  - A static conscoius control (Stimulus appearing at maximal contrast on trials start, blended into static mask)
+  - Just stimulus
+  - Monocular control - like classical bCFS, but without fade in	
 - Only up-down variation of the task is supported right now.
 - Only images as stimuli are supported right now.
 
