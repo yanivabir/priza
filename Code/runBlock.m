@@ -26,6 +26,13 @@ function Logger = runBlock(Params, Block)
     % Up the priority
     Priority(1);
     
+    % Start keyboard listener
+    keysOfInterest=zeros(1,256);
+    keysOfInterest(Params.keyRight) = 1;
+    keysOfInterest(Params.keyLeft) = 1;
+    keysOfInterest(Params.keyEsc) = 1;
+    KbQueueCreate([], keysOfInterest);
+    
     % Trial loop
     ITIStart = GetSecs();   % When did the ITI start
     for trl = 1:length(Plan)

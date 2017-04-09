@@ -24,7 +24,7 @@ Params.keyRight = KbName('/?'); % What is the key for right hand?
 Params.keyLeft = KbName('z'); % What is the key for left hand?
 Params.keyEsc = KbName('escape'); % Abort experiment key
 Params.keyLeftTop = KbName('a');   % Right top key
-Params.keyRightTop = KbName('''');    % Left top key
+Params.keyRightTop = KbName('''"');    % Left top key
 Params.keyCont = KbName('1!');  % Continue key for experimenter
 
 % Define variable levels for output for each key
@@ -73,7 +73,7 @@ Params.mondrian.fadeOutTime = 3;    % Fade out time for mondrian from end of tri
 Params.deltaShift = 2;   % Amount of shit per key press (px)
 
 %% Break message
-Params.breakMessage.text = 'הפסקה, לחץ על \nמקש הרווח להמשך';
+Params.breakMessage.text = '?????, ??? ?? \n??? ????? ?????';
 Params.breakMessage.rtl = 0;
 Params.breakMessage.contKey = KbName('space');
 

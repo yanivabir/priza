@@ -8,7 +8,7 @@ Screen('Preference', 'Verbosity', 3);
 
 HideCursor;
 
-Screen('Preference','TextEncodingLocale', '.1255');
+% Screen('Preference','TextEncodingLocale', '.1255');
 Screen('Preference', 'TextRenderer', 1);
 Screen('Preference', 'TextAntiAliasing',2);
 

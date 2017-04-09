@@ -4,7 +4,7 @@ function Data = doTrial(Params, Trial)
 % across experiments, Trial for parameters that vary with each trial.
 
 % History:
-% 20170409 two keypress at once fix
+% 20170409 two keypress at once fix, KbQueue used for greater accuracy
 
 %% Prep
 % Determine end frame from trial
@@ -27,6 +27,9 @@ elseif Trial.Location == 10
 end
 
 stimLocation = CenterRect(stimLocation, frameLocation);
+
+% Start listening to keyboard
+KbQueueStart();
 
 % Missing values
 Data.RT=NaN;
@@ -89,18 +92,17 @@ while thisFrame <= maxFrame && ~terminate
         Params.stimulus.maxAlpha);
     
     % Get response:
-    [keyDown,RT,keyCode,~] = KbCheck();
+    [keyDown, firstPress] = KbQueueCheck();
     
     if keyDown
-        if keyCode(Params.keyEsc)
+        if firstPress(Params.keyEsc)
             % Close screen and break loop if esc is pressed
             sca;
             break
-        elseif any(keyCode([Params.keyRight,Params.keyLeft])) &&...
-                sum(keyCode) == 1
-            Data.RT = RT - startTime;
-            Data.Response = Params.respMap(keyCode == 1);
-            Data.Acc = Params.respMap(keyCode == 1)+8 == Trial.Location;
+        elseif sum(firstPress([Params.keyRight,Params.keyLeft]) > 0) == 1
+            Data.RT = firstPress(firstPress > 0) - startTime;
+            Data.Response = Params.respMap(firstPress > 0);
+            Data.Acc = Params.respMap(firstPress > 0)+8 == Trial.Location;
             terminate = 1;
         end
     end
@@ -115,6 +117,9 @@ end
 
 % Clear presentation
 Screen('Flip', Params.w);
+
+% Stop listening
+KbQueueStop();
 
 % Anxillary functions
     function drawFixation(side)

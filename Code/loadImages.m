@@ -4,7 +4,7 @@ function Images = loadImages(Params)
 % Display message
 fprintf('Loading stimuli, please wait.');
 % Read csv file
-Images = readtable(Params.stimList);
+Images = readtable(Params.stimList, 'Delimiter', ',');
 Images{end,'image'} = {NaN};    % Preallocate
 
 for ii = 1:height(Images)
