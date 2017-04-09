@@ -3,6 +3,9 @@ function Data = doTrial(Params, Trial)
 % parameters in two structs - Params for parameters that are constant
 % across experiments, Trial for parameters that vary with each trial.
 
+% History:
+% 20170409 two keypress at once fix
+
 %% Prep
 % Determine end frame from trial
 maxFrame = time2flips(Params, Params.endTrial);
@@ -86,15 +89,16 @@ while thisFrame <= maxFrame && ~terminate
         Params.stimulus.maxAlpha);
     
     % Get response:
-    [keyDown,~,keyCode,~] = KbCheck();
+    [keyDown,RT,keyCode,~] = KbCheck();
     
     if keyDown
         if keyCode(Params.keyEsc)
             % Close screen and break loop if esc is pressed
             sca;
             break
-        elseif any(keyCode([Params.keyRight,Params.keyLeft]))
-            Data.RT = GetSecs() - startTime;
+        elseif any(keyCode([Params.keyRight,Params.keyLeft])) &&...
+                sum(keyCode) == 1
+            Data.RT = RT - startTime;
             Data.Response = Params.respMap(keyCode == 1);
             Data.Acc = Params.respMap(keyCode == 1)+8 == Trial.Location;
             terminate = 1;
