@@ -1,6 +1,6 @@
 # priza
 
-This is version 1.0 of the revised experiment.
+This is version 1.0.1 of the revised experiment.
 Features:
 - Easy switching from mirror-stereoscope to 3d screen.
 - Optional anti-shadowing for 3d screen.
@@ -19,7 +19,9 @@ Features:
 
 Point of interest:
 - It is coded for clarity and ease of use.
-- Best practices of PTB have been used to make timing as reliable as possible (see outstanding issues below).
+- Best practices of PTB have been used to make timing as reliable as possible.
+- You can choose a frame rate for flipping the screen, thus decrease demand from hardwear and avoid missed frames.
+- Keyboard monitoring is does independently of screen flips, and thus is as accurate as computer allows.
 - To keep everything organized, sub functions are passed all their arguments in one or two structs.
 
 The logic of the code:
@@ -43,6 +45,3 @@ Wishlist:
  - Other types of masks.
  - Allow for differential alpha values for different groups of stimuli.
  - Calibrate monitor gamma function on startup.
-
-Outstanding issues:
-  - Screen flips in the animation loop are implemented without the "when" option. Further research and testing is needed to know which is optimal timing wise.
