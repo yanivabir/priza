@@ -40,7 +40,7 @@ Params.breakEvery = 100;    % Break every x trials
 %% General presentation
 Params.bw = [0.5 0.5 0.5];  % Background color in RGB
 Params.fixationSize = 1.75;    % Fixation size in visual angle
-
+Params.timeRes = 2;        % When fading stimuli in/out, update every x frames
 %% Stimulus presentation parameters
 Params.stimulus.size = 15.5;   % Stim width/height in visual angle
 Params.stimulus.maxAlpha = 0.35;    % Maximux stimulus opacity value

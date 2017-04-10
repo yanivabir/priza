@@ -12,7 +12,7 @@ function Logger = runBlock(Params, Block)
     
     % Preallocate Logger struct
     Logger = struct('Subject',[],'Trial',[],'Type',[],'Stimulus',[],...
-        'Eye',[],'Location',[],'Response',[],'RT',[],'Acc',[]);
+        'Eye',[],'Location',[],'Response',[],'RT',[],'Acc',[], 'VBL', []);
     Logger(length(Plan)).Trial = NaN;
     
     % Add trial data to general Logger

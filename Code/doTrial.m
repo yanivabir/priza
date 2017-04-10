@@ -5,6 +5,8 @@ function Data = doTrial(Params, Trial)
 
 % History:
 % 20170409 two keypress at once fix, KbQueue used for greater accuracy
+% 20170410 implemented optionally lower frame rate for better performance,
+%          and the use of 'when' parameter for Screen('Flip')
 
 %% Prep
 % Determine end frame from trial
@@ -35,12 +37,17 @@ KbQueueStart();
 Data.RT=NaN;
 Data.Response=NaN;
 
-%% Animation loop
+%% Animation loops
 stimAlpha = 0;  % Initial stimulus alpha
 mondrian = createMondrian(1 - Trial.Eye);   % Create mask for first frame
 terminate = 0;  % Assisting variable
 thisFrame = 1;  % Frame counter
-startTime = GetSecs();  % Time of trial start
+fstep = Params.timeRes;  % Jump by x frames
+fstepIFI = fstep * Params.Display.flipInterval;   % Which is x sec
+thisFlip = 1;   % Count flips
+vbl = NaN(1,maxFrame / fstep + 1);
+vbl(1) = Screen('Flip', Params.w);  % Time of trial start
+
 while thisFrame <= maxFrame && ~terminate
     
     % Select masked-eye image buffer for drawing:
@@ -74,20 +81,20 @@ while thisFrame <= maxFrame && ~terminate
     % Now all non-drawing tasks:
     
     % Compute mask for next frame:
-    if ~mod(thisFrame, time2flips(Params, 1 / Params.mondrian.Hz))
+    if mod(thisFrame, time2flips(Params, 1 / Params.mondrian.Hz)) < fstep
         mondrian = createMondrian(1 - Trial.Eye);
-    end
-    
+    end 
+     
     % Compute mask alpha for next frame:
     if maxFrame < inf
         % If there is a time cut off to the trial
-        maskAlpha = 1 - min((maxFrame - (thisFrame + 1)) / ...
+        maskAlpha = 1 - min((maxFrame - (thisFrame + fstep)) / ...
             time2flips(Params, Params.mondrian.fadeOutTime),1);
         mondrian.colors(end,4) = maskAlpha;
     end
     
     % Compute stimulus alpha for next frame
-    stimAlpha = min(Params.stimulus.maxAlpha * (thisFrame + 1) / ...
+    stimAlpha = min(Params.stimulus.maxAlpha * (thisFrame + fstep) / ...
         time2flips(Params, Params.stimulus.fadeInTime), ...
         Params.stimulus.maxAlpha);
     
@@ -100,16 +107,23 @@ while thisFrame <= maxFrame && ~terminate
             sca;
             break
         elseif sum(firstPress([Params.keyRight,Params.keyLeft]) > 0) == 1
-            Data.RT = firstPress(firstPress > 0) - startTime;
+            Data.RT = firstPress(firstPress > 0) - vbl(1);
             Data.Response = Params.respMap(firstPress > 0);
             Data.Acc = Params.respMap(firstPress > 0)+8 == Trial.Location;
             terminate = 1;
         end
     end
+    
+    % Advance frame counter
+    thisFrame = thisFrame + fstep;
+    thisFlip = thisFlip + 1;
+    
     % Flip screen - currently implemented without specifying when
-    Screen('Flip',Params.w);
-    thisFrame = thisFrame + 1;
+    vbl(thisFlip) = Screen('Flip',Params.w, ...
+        vbl(thisFlip - 1) + fstepIFI - Params.Display.flipInterval / 2);
 end
+
+Data.vbl = vbl;
 
 if ~Params.saltShaker
     KbReleaseWait();

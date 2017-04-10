@@ -7,8 +7,8 @@ function Display = mkDisplay(Params)
 %% Parameters that need to be input
 switch Params.location
     case 'yaniv'
-        Display.dimensions = [31.5 17.5];       % (cm)    
-        Display.distance = 45;              % Viewing distance (cm)
+        Display.dimensions = [28.5 17.9];       % (cm)    
+        Display.distance = 30;              % Viewing distance (cm)
         Display.stereoMode = 'stereoscope';
         Display.reduceCrossTalk = [];    % If you want cross-talk reduction b/w sides, specify gain. Otherwise leave empty
         

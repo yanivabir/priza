@@ -60,12 +60,12 @@ try
     Logger = runBlock(Params, training);
     
     % Insturctions
-    msg.text = 'אנא קרא לנסיין';
+    msg.text = 'Please call experimenter';
     msg.rtl = 0;
     msg.contKey = KbName('1!');
     doInstructions(Params,msg);
     
-    msg.text = 'לחץ על מקש\nהרווח להמשך';
+    msg.text = 'Press the space key to continue';
     msg.contKey = KbName('space');
     doInstructions(Params,msg);
     
@@ -83,7 +83,7 @@ try
     saveFiles(Params,Logger);
     
     % Display message
-    msg.text = 'אנא קרא לנסיין';
+    msg.text = '??? ??? ??????';
     msg.contKey = KbName('1!');
     doInstructions(Params,msg);
     
